@@ -1,0 +1,37 @@
+.pageContainer {
+  /* background: rgb(158, 98, 52);
+  background: linear-gradient(
+    201deg,
+    rgba(158, 98, 52, 1) 36%,
+    rgba(96, 56, 19, 1) 58%
+  ); */
+  /* background-color: #f5f5f5; */
+  /* min-height: 100vh; */
+}
+
+.MainPageContainer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6); /* Black overlay with opacity */
+  z-index: 1;
+}
+
+.MainPageContainer > * {
+  position: relative;
+  z-index: 2;
+}
+.fixedWhatsappIcon {
+  font-size: 40px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 25px;
+  background-color: #25d366;
+  color: white;
+  padding: 15px;
+  border-radius: 25px;
+}

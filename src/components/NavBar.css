@@ -1,0 +1,91 @@
+.languagesFlags {
+  border-radius: 50%;
+  height: 35px;
+  width: 35px;
+  user-select: none;
+}
+.sections {
+  font-size: 18px;
+}
+.custom-shape-divider-top-1725551573 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  margin-top: 135px;
+}
+
+.custom-shape-divider-top-1725551573 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 144px;
+}
+
+.custom-shape-divider-top-1725551573 .shape-fill {
+  fill: #f5f5f5;
+}
+/* From Uiverse.io by ArturCodeCraft */
+/* <reset-style> ============================ */
+a {
+  text-decoration: none;
+}
+/* <main-style> ============================ */
+.menu__link {
+  color: black;
+  line-height: 2;
+  position: relative;
+}
+.menu__link:hover {
+  color: rgb(158, 98, 52);
+}
+
+.menu__link::before {
+  content: "";
+  width: 0;
+  height: 2px;
+  border-radius: 2px;
+  background-color: rgb(158, 98, 52);
+  position: absolute;
+  bottom: -0.25rem;
+  left: 50%;
+  transition: width 0.4s, left 0.4s;
+}
+
+.menu__link:hover::before {
+  width: 100%;
+  left: 0;
+}
+.navContainer {
+  background-color: rgba(224, 190, 157, 0.37);
+  width: 90vw;
+
+  height: 80px;
+  border-radius: 20px;
+  font-size: 20px;
+}
+.routedPage,
+.routedPage:hover {
+  color: rgba(224, 190, 157, 1);
+  background-color: rgba(96, 56, 19, 1);
+  box-shadow: 0px 4px 10px 0px rgba(96, 56, 19, 0.3);
+  border-radius: 15px;
+  padding: 7px 25px;
+  cursor: pointer;
+}
+.page,
+.page:hover {
+  color: rgba(96, 56, 19, 1);
+  cursor: pointer;
+}
+.navAllContainer {
+  left: 50%;
+  transform: translateX(-50%);
+}
+@media screen and (max-width: 992px) {
+  .navContainer {
+    display: none !important;
+  }
+}

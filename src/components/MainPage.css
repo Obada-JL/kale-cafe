@@ -1,0 +1,280 @@
+.hello {
+  padding-top: 95px;
+}
+.custom-shape-divider-bottom-1725552380 {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+  border-bottom: 0;
+  margin-bottom: -2px;
+}
+
+.custom-shape-divider-bottom-1725552380 svg {
+  position: relative;
+  display: block;
+  width: calc(122% + 1.3px);
+  height: 198px;
+}
+
+.custom-shape-divider-bottom-1725552380 .shape-fill {
+  fill: #f5f5f5;
+}
+.sectionsContainer {
+  text-align: center;
+  padding-top: 100px;
+  color: white;
+}
+.section h2 {
+  text-decoration: underline;
+  font-size: 32px;
+}
+.sectionImage {
+  border: 1px solid grey;
+  box-shadow: 3px 7px #ccc0c0;
+  margin-bottom: 7px;
+}
+.section {
+  /* background-color: #f5f5f5; */
+  color: black;
+  padding: 7px 10px;
+  border-radius: 8px;
+}
+/* From Uiverse.io by vikiWayne */
+.button {
+  padding: 1em 2em;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: #2c9caf;
+  transition: all 1000ms;
+  font-size: 15px;
+  position: relative;
+  overflow: hidden;
+  outline: 2px solid #2c9caf;
+}
+
+button:hover {
+  color: #ffffff;
+  transform: scale(1.1);
+  outline: 2px solid #70bdca;
+  box-shadow: 4px 5px 17px -4px #268391;
+}
+
+button::before {
+  content: "";
+  position: absolute;
+  left: -50px;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background-color: #2c9caf;
+  transform: skewX(45deg);
+  z-index: -1;
+  transition: width 1000ms;
+}
+
+button:hover::before {
+  width: 250%;
+}
+.section2 {
+  background: rgba(244, 231, 219, 1);
+}
+.sectionHeader {
+  color: rgba(96, 56, 19, 1);
+  font-size: 30px;
+  font-weight: 800;
+  display: flex;
+  justify-content: center;
+}
+.sectionIcon {
+  width: 80px;
+}
+.sectionTitle {
+  color: rgba(96, 56, 19, 1);
+  font-size: 30px;
+  width: 90px;
+  display: flex;
+  justify-content: center;
+}
+/* .sectionItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+} 
+.sectionItem > div {
+  display: flex;
+  justify-content: center;
+} */
+.section3 {
+  position: relative;
+}
+.sliderProduct {
+  border-radius: 30px;
+  box-shadow: 0px 4px 10px 0px rgba(96, 56, 19, 0.3);
+}
+.sliderProductContainer {
+  background-color: rgba(188, 150, 115, 1);
+  width: 300px;
+  border-radius: 30px;
+  padding-bottom: 30px;
+  user-select: none;
+  /* flex-basis: 100%; */
+  flex-shrink: 0;
+  /* scroll-snap-align: start; */
+}
+.mainSliderContainer {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 30px;
+}
+.allContainer {
+  grid-column: 1 / -1;
+  /* font-size: var(--font-size-40); */
+  line-height: 1.7;
+  max-width: 100%;
+}
+.scroll-container {
+  display: flex;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  cursor: grab;
+  -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+}
+
+.scroll-container::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Chrome, Safari, Opera */
+}
+
+.scroll-item {
+  min-width: 200px;
+  margin: 10px;
+}
+
+.scroll-item img {
+  border-radius: 15px;
+  width: 100%;
+  height: auto;
+}
+.section1Texts {
+  margin: auto;
+  width: 450px;
+  padding-right: 100px;
+}
+.textContainer {
+  /* margin: auto;
+  width: 450px;
+  padding-right: 100px; */
+  /*    display: flex;
+  flex-direction: column;
+  justify-content: center;*/
+}
+.cafeName {
+  color: #603813;
+  font-size: 90px;
+  font-weight: bolder;
+  text-align: right;
+}
+.slogan {
+  font-size: 35px;
+  text-align: right;
+}
+/* .section1Container {
+  width: 957px;
+  background: url("../assets/kale cafe image.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+} */
+.mobileContactButton {
+  display: none;
+}
+@media screen and (max-width: 992px) {
+  .ellipses {
+    display: none;
+  }
+  .section1 {
+    width: 100vw;
+    height: auto;
+    background: #f4e7db;
+  }
+  .section1Texts {
+    padding-right: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .mobileContactButton {
+    display: flex;
+    font-size: 14px;
+    align-items: end;
+  }
+  .textContainer {
+    padding: 0;
+    padding-right: 15px;
+  }
+  .cafeName {
+    font-size: 32px;
+  }
+  .slogan {
+    font-size: 18px;
+  }
+  .triangleShape {
+    width: 150px !important;
+    background: #f4e7db !important;
+    margin-right: 39% !important;
+  }
+  .section2 {
+    background-color: white;
+  }
+  .iconContainer {
+    flex: 80%;
+    border-radius: 15px;
+    background-color: #f4e7db;
+    padding: 15px;
+  }
+  .titlesContainer {
+    gap: 5px;
+  }
+  .sectionItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 25%;
+  }
+  .sectionIcon {
+    width: 35px;
+    height: 100%;
+  }
+  .sectionTitle {
+    font-size: 18px;
+    margin-bottom: 0;
+  }
+  .allContainer {
+    background: #f4e7db;
+    padding: 10px;
+  }
+  .mainSlider {
+    min-width: 200px;
+  }
+  .sliderProductContainer {
+    width: 200px;
+  }
+  .productsMainEllipse {
+    display: none;
+  }
+  .sectionHeader {
+    justify-content: end;
+    padding-right: 5px;
+  }
+}
