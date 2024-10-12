@@ -3,7 +3,7 @@ import MainImage from "../assets/kale cafe image.jpeg";
 import TriangleImage from "../assets/triangle-rounded-divider.svg";
 import ellipse1 from "../assets/Ellipse 8.svg";
 import ellipse2 from "../assets/Group 8.svg";
-import image2 from "../assets/image2.jpg";
+import image2 from "../assets/image2.JPG";
 import productsEllipse from "../assets/productsSection ellipse.svg";
 import sectionIcon1 from "../assets/Frame 33.svg";
 import sectionIcon2 from "../assets/Frame 30.svg";
