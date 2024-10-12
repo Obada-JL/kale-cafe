@@ -3,6 +3,7 @@ import MainImage from "../assets/kale cafe image.jpeg";
 import TriangleImage from "../assets/triangle-rounded-divider.svg";
 import ellipse1 from "../assets/Ellipse 8.svg";
 import ellipse2 from "../assets/Group 8.svg";
+import image2 from "/src/assets/image2.jpg";
 import productsEllipse from "../assets/productsSection ellipse.svg";
 import sectionIcon1 from "../assets/Frame 33.svg";
 import sectionIcon2 from "../assets/Frame 30.svg";
@@ -170,44 +171,44 @@ function MainPage() {
               onMouseUp={handleMouseUp}
               onMouseMove={handleMouseMove}
             >
-              <div className="sliderProductContainer scroll-item">
+                           <div className="sliderProductContainer scroll-item">
                 <img
-                  src="src/assets/image2.JPG"
+                  src={image2}
                   width={300}
                   className="sliderProduct mainSlider"
                 />
               </div>
               <div className="sliderProductContainer scroll-item">
                 <img
-                  src="src/assets/image2.JPG"
+                  src={image2}
                   width={300}
                   className="sliderProduct mainSlider"
                 />
               </div>
               <div className="sliderProductContainer scroll-item">
                 <img
-                  src="src/assets/image2.JPG"
+                  src={image2}
                   width={300}
                   className="sliderProduct mainSlider"
                 />
               </div>
               <div className="sliderProductContainer scroll-item">
                 <img
-                  src="src/assets/image2.JPG"
+                  src={image2}
                   width={300}
                   className="sliderProduct mainSlider"
                 />
               </div>
               <div className="sliderProductContainer scroll-item">
                 <img
-                  src="src/assets/image2.JPG"
+                  src={image2}
                   width={300}
                   className="sliderProduct mainSlider"
                 />
               </div>
               <div className="sliderProductContainer scroll-item">
                 <img
-                  src="src/assets/image2.JPG"
+                  src={image2}
                   width={300}
                   className="sliderProduct mainSlider"
                 />
