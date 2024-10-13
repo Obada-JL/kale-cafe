@@ -5,6 +5,7 @@ import ellipse2 from "../assets/product ellipse 2.svg";
 import drinksIcon from "../assets/drinksIcon.svg";
 import backArrow from "../assets/back arrow.svg";
 import image2 from "../assets/image2.JPG"
+import slideEllipse from "../assets/pduduct page side ellipse.svg
 
 import "./ProductCategory.css";
 
@@ -296,7 +297,7 @@ const ProductCategory = () => {
       >
         <div className="position-absolute" style={{ left: "0", top: "50%" }}>
           <img
-            src="/src/assets/pduduct page side ellipse.svg"
+            src={sideEllipse}
             alt="Side Ellipse"
             className="midEllipse"
           />
