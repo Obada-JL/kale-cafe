@@ -4,6 +4,7 @@ import ellipse1 from "../assets/product ellipse.svg";
 import ellipse2 from "../assets/product ellipse 2.svg";
 import drinksIcon from "../assets/drinksIcon.svg";
 import backArrow from "../assets/back arrow.svg";
+import image2 from "../assets/image2.JPG"
 
 import "./ProductCategory.css";
 
@@ -228,49 +229,49 @@ const ProductCategory = () => {
         >
           <div className="sliderProduct scroll-item">
             <img
-              src="src/assets/image2.JPG"
+              src={image2}
               width={150}
               className="sliderProduct"
             />
           </div>
           <div className="sliderProduct scroll-item">
             <img
-              src="src/assets/image2.JPG"
+              src={image2}
               width={150}
               className="sliderProduct"
             />
           </div>
           <div className="sliderProduct scroll-item">
             <img
-              src="src/assets/image2.JPG"
+              src={image2}
               width={150}
               className="sliderProduct"
             />
           </div>
           <div className="sliderProduct scroll-item">
             <img
-              src="src/assets/image2.JPG"
+              src={image2}
               width={150}
               className="sliderProduct"
             />
           </div>
           <div className="sliderProduct scroll-item">
             <img
-              src="src/assets/image2.JPG"
+              src={image2}
               width={150}
               className="sliderProduct"
             />
           </div>
           <div className="sliderProduct scroll-item">
             <img
-              src="src/assets/image2.JPG"
+              src={image2}
               width={150}
               className="sliderProduct"
             />
           </div>
           <div className="sliderProduct scroll-item">
             <img
-              src="src/assets/image2.JPG"
+              src={image2}
               width={150}
               className="sliderProduct"
             />
