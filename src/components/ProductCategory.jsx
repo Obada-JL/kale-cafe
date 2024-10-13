@@ -5,7 +5,7 @@ import ellipse2 from "../assets/product ellipse 2.svg";
 import drinksIcon from "../assets/drinksIcon.svg";
 import backArrow from "../assets/back arrow.svg";
 import image2 from "../assets/image2.JPG"
-import slideEllipse from "../assets/pduduct page side ellipse.svg
+import slideEllipse from "../assets/pduduct page side ellipse.svg"
 
 import "./ProductCategory.css";
 
