@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/:category",
+      "destination": "/",
+      "permanent": false
+    }
+  ]
+}
