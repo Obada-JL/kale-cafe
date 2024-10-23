@@ -123,7 +123,7 @@ function MainPage() {
                 <p className="sectionTitle">الأراكيل </p>
               </div>
             </a>
-            <a href="/sweets" className="sectionItem">
+            <a href="/desserts" className="sectionItem">
               <div className="iconContainer">
                 <img src={sectionIcon1} alt="" className="sectionIcon" />
               </div>
