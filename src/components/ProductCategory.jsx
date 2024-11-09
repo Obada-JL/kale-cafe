@@ -108,7 +108,7 @@ const ProductCategory = () => {
     setIsLoading(true);
     try {
       const res = await fetch(
-        `https://kale-cafe-server.onrender.com${data.productsRoute}`,
+        `http://145.223.33.75:5000${data.productsRoute}`,
         {
           method: "GET",
           headers: {
