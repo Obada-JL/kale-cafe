@@ -9,9 +9,10 @@ import sectionIcon1 from "../assets/Frame 33.svg";
 import sectionIcon2 from "../assets/Frame 30.svg";
 import sectionIcon3 from "../assets/Frame 32.svg";
 import sectionIcon4 from "../assets/Frame 31.svg";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 function MainPage() {
   const scrollContainerRef = useRef(null);
+  const [images, setImages] = useState([]);
 
   const handleMouseDown = (e) => {
     const slider = scrollContainerRef.current;
@@ -36,7 +37,44 @@ function MainPage() {
     const walk = (x - slider.startX) * 2; // Adjust scroll speed
     slider.scrollLeft = slider.scrollLeftStart - walk;
   };
+  const fetchImages = async (selectedImgaesCategory) => {
+    // console.log(data.imagesRoute);
+    try {
+      const res = await fetch(
+        `http://145.223.33.75:5000/api/getSpecialImages`,
+        {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+      console.log(res);
+      if (!res.ok) {
+        throw new Error("Network response was not ok");
+      }
 
+      const ImagesData = await res.json();
+      console.log(ImagesData);
+      setImages(ImagesData);
+
+      // if (Array.isArray(ImagesData)) {
+      //   const filteredImages = ImagesData.filter(
+      //     (image) =>
+      //       // data.category.includes(image.category)
+      //       selectedImgaesCategory == image.category
+      //   );
+      //   setImages(filteredImages);
+      // } else {
+      //   console.error("ImagesData is not an array:", ImagesData);
+      // }
+    } catch (error) {
+      console.error("Error fetching Images:", error);
+    }
+  };
+  useEffect(() => {
+    fetchImages();
+  }, []);
   return (
     <div>
       <div>
@@ -171,7 +209,16 @@ function MainPage() {
               onMouseUp={handleMouseUp}
               onMouseMove={handleMouseMove}
             >
-                           <div className="sliderProductContainer scroll-item">
+              {images.map((picture, index) => (
+                <div className="sliderProductContainer scroll-item" key={index}>
+                  <img
+                    src={`http://145.223.33.75:5000/uploads/${picture.image}`}
+                    width={300}
+                    className="sliderProduct mainSlider"
+                  />
+                </div>
+              ))}
+              <div className="sliderProductContainer scroll-item">
                 <img
                   src={image2}
                   width={300}

@@ -4,8 +4,8 @@ import ellipse1 from "../assets/product ellipse.svg";
 import ellipse2 from "../assets/product ellipse 2.svg";
 import drinksIcon from "../assets/drinksIcon.svg";
 import backArrow from "../assets/back arrow.svg";
-import image2 from "../assets/image2.JPG"
-import sideEllipse from "../assets/pduduct page side ellipse.svg"
+import image2 from "../assets/image2.JPG";
+import sideEllipse from "../assets/pduduct page side ellipse.svg";
 
 import "./ProductCategory.css";
 
@@ -13,15 +13,14 @@ import "./ProductCategory.css";
 const productData = {
   foods: {
     icon: drinksIcon,
-    category: ["Foods", "FastFoods"],
-    imagesRoute: "/api/foods/images",
+    category: ["المقبلات", "المأكولات الغربية", "المشاوي", "الوجبات الخفيفة"],
+    imagesRoute: "/api/getImages",
     productsRoute: "/api/getFoods",
   },
   drinks: {
     icon: drinksIcon,
     category: [
       "ميلك شيك",
-      " شيك",
       "المشروبات الغازية",
       "العصير الفريش",
       "الكوكتيلات",
@@ -32,14 +31,20 @@ const productData = {
       "المشروبات الساخنة",
       "الكوكتيلات",
     ],
-    imagesRoute: "/api/drinks/images",
+    imagesRoute: "/api/getImages",
     productsRoute: "/api/getDrinks",
   },
   desserts: {
     icon: drinksIcon,
-    category: ["Desserts", "FastDesserts"],
-    imagesRoute: "/api/desserts/images",
+    category: ["الحلويات", "الفواكه", "حلويات فرنسية", "البوظة"],
+    imagesRoute: "/api/getImages",
     productsRoute: "/api/getDesserts",
+  },
+  hookah: {
+    icon: drinksIcon,
+    category: ["الأراكيل"],
+    imagesRoute: "/api/getImages",
+    productsRoute: "/api/getHookahs",
   },
 };
 
@@ -103,6 +108,7 @@ const ProductCategory = () => {
   };
   const getSelectedCategory = (category) => {
     fetchProducts(category);
+    fetchImages(category);
   };
   const fetchProducts = async (selectedCategoryName) => {
     setIsLoading(true);
@@ -137,11 +143,41 @@ const ProductCategory = () => {
     }
     setIsLoading(false);
   };
+  const fetchImages = async (selectedImgaesCategory) => {
+    console.log(data.imagesRoute);
+    try {
+      const res = await fetch(`http://145.223.33.75:5000${data.imagesRoute}`, {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      console.log(res);
+      if (!res.ok) {
+        throw new Error("Network response was not ok");
+      }
+
+      const ImagesData = await res.json();
+      if (Array.isArray(ImagesData)) {
+        const filteredImages = ImagesData.filter(
+          (image) =>
+            // data.category.includes(image.category)
+            selectedImgaesCategory == image.category
+        );
+        setImages(filteredImages);
+      } else {
+        console.error("ImagesData is not an array:", ImagesData);
+      }
+    } catch (error) {
+      console.error("Error fetching Images:", error);
+    }
+  };
   // Fetch data from API
   useEffect(() => {
     if (data) {
       fetchProducts(data.category[0]);
       setSelectedCategory(data.category[0]);
+      fetchImages(data.category[0]);
     }
   }, [category, data]);
 
@@ -228,54 +264,35 @@ const ProductCategory = () => {
           onMouseUp={handleMouseUp}
           onMouseMove={handleMouseMove}
         >
+          {images.map((picture, index) => (
+            <div className="sliderProduct scroll-item" key={index}>
+              <img
+                src={`http://145.223.33.75:5000/uploads/${picture.image}`}
+                width={150}
+                className="sliderProduct"
+              />
+            </div>
+          ))}
           <div className="sliderProduct scroll-item">
-            <img
-              src={image2}
-              width={150}
-              className="sliderProduct"
-            />
+            <img src={image2} width={150} className="sliderProduct" />
           </div>
           <div className="sliderProduct scroll-item">
-            <img
-              src={image2}
-              width={150}
-              className="sliderProduct"
-            />
+            <img src={image2} width={150} className="sliderProduct" />
           </div>
           <div className="sliderProduct scroll-item">
-            <img
-              src={image2}
-              width={150}
-              className="sliderProduct"
-            />
+            <img src={image2} width={150} className="sliderProduct" />
           </div>
           <div className="sliderProduct scroll-item">
-            <img
-              src={image2}
-              width={150}
-              className="sliderProduct"
-            />
+            <img src={image2} width={150} className="sliderProduct" />
           </div>
           <div className="sliderProduct scroll-item">
-            <img
-              src={image2}
-              width={150}
-              className="sliderProduct"
-            />
+            <img src={image2} width={150} className="sliderProduct" />
           </div>
           <div className="sliderProduct scroll-item">
-            <img
-              src={image2}
-              width={150}
-              className="sliderProduct"
-            />
+            <img src={image2} width={150} className="sliderProduct" />
           </div>
           <div className="sliderProduct scroll-item">
-            <img
-              src={image2}
-              width={150}
-              className="sliderProduct"
-            />
+            <img src={image2} width={150} className="sliderProduct" />
           </div>
           {/* {images.map((image, index) => (
             <div key={index} className="sliderProduct scroll-item">
@@ -296,11 +313,7 @@ const ProductCategory = () => {
         style={{ direction: "rtl" }}
       >
         <div className="position-absolute" style={{ left: "0", top: "50%" }}>
-          <img
-            src={sideEllipse}
-            alt="Side Ellipse"
-            className="midEllipse"
-          />
+          <img src={sideEllipse} alt="Side Ellipse" className="midEllipse" />
         </div>
         <div className="table-container pb-5">
           <div className="header-container">
