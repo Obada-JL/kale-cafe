@@ -113,7 +113,7 @@ const ProductCategory = () => {
   const fetchProducts = async (selectedCategoryName) => {
     setIsLoading(true);
     try {
-      const res = await fetch(`https://145.223.33.75${data.productsRoute}`, {
+      const res = await fetch(`https://kale-cafe.com${data.productsRoute}`, {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -143,7 +143,7 @@ const ProductCategory = () => {
   const fetchImages = async (selectedImgaesCategory) => {
     console.log(data.imagesRoute);
     try {
-      const res = await fetch(`https://145.223.33.75${data.imagesRoute}`, {
+      const res = await fetch(`https://kale-cafe.com${data.imagesRoute}`, {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -264,7 +264,7 @@ const ProductCategory = () => {
           {images.map((picture, index) => (
             <div className="sliderProduct scroll-item" key={index}>
               <img
-                src={`https://145.223.33.75/uploads/${picture.image}`}
+                src={`https://kale-cafe.com/uploads/${picture.image}`}
                 width={150}
                 className="sliderProduct"
               />

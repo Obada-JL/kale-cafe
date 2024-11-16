@@ -40,7 +40,7 @@ function MainPage() {
   const fetchImages = async (selectedImgaesCategory) => {
     // console.log(data.imagesRoute);
     try {
-      const res = await fetch(`https://145.223.33.75/api/getSpecialImages`, {
+      const res = await fetch(`https://kale-cafe.com/api/getSpecialImages`, {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -209,7 +209,7 @@ function MainPage() {
               {images.map((picture, index) => (
                 <div className="sliderProductContainer scroll-item" key={index}>
                   <img
-                    src={`https://145.223.33.75/uploads/${picture.image}`}
+                    src={`https://kale-cafe.com/uploads/${picture.image}`}
                     width={300}
                     className="sliderProduct mainSlider"
                   />
