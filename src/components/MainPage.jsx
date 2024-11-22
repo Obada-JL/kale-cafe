@@ -40,12 +40,15 @@ function MainPage() {
   const fetchImages = async (selectedImgaesCategory) => {
     // console.log(data.imagesRoute);
     try {
-      const res = await fetch(`http://145.223.33.75/api/getSpecialImages`, {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
+      const res = await fetch(
+        `http://145.223.33.75:5000/api/getSpecialImages`,
+        {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
       console.log(res);
       if (!res.ok) {
         throw new Error("Network response was not ok");
@@ -209,7 +212,7 @@ function MainPage() {
               {images.map((picture, index) => (
                 <div className="sliderProductContainer scroll-item" key={index}>
                   <img
-                    src={`http://145.223.33.75/uploads/${picture.image}`}
+                    src={`http://145.223.33.75:5000/uploads/${picture.image}`}
                     width={300}
                     className="sliderProduct mainSlider"
                   />

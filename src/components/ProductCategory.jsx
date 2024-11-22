@@ -113,12 +113,15 @@ const ProductCategory = () => {
   const fetchProducts = async (selectedCategoryName) => {
     setIsLoading(true);
     try {
-      const res = await fetch(`http://145.223.33.75${data.productsRoute}`, {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
+      const res = await fetch(
+        `http://145.223.33.75:5000${data.productsRoute}`,
+        {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
 
       if (!res.ok) {
         throw new Error("Network response was not ok");
@@ -143,7 +146,7 @@ const ProductCategory = () => {
   const fetchImages = async (selectedImgaesCategory) => {
     console.log(data.imagesRoute);
     try {
-      const res = await fetch(`http://145.223.33.75${data.imagesRoute}`, {
+      const res = await fetch(`http://145.223.33.75:5000${data.imagesRoute}`, {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -264,7 +267,7 @@ const ProductCategory = () => {
           {images.map((picture, index) => (
             <div className="sliderProduct scroll-item" key={index}>
               <img
-                src={`http://145.223.33.75/uploads/${picture.image}`}
+                src={`http://145.223.33.75:5000/uploads/${picture.image}`}
                 width={150}
                 className="sliderProduct"
               />
