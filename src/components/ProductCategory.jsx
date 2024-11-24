@@ -113,15 +113,12 @@ const ProductCategory = () => {
   const fetchProducts = async (selectedCategoryName) => {
     setIsLoading(true);
     try {
-      const res = await fetch(
-        `http://145.223.33.75:5000${data.productsRoute}`,
-        {
-          method: "GET",
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
-      );
+      const res = await fetch(`https://kale-cafe.com${data.productsRoute}`, {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
 
       if (!res.ok) {
         throw new Error("Network response was not ok");
