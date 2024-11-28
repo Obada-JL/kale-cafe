@@ -215,48 +215,6 @@ function MainPage() {
                   />
                 </div>
               ))}
-              <div className="sliderProductContainer scroll-item">
-                <img
-                  src={image2}
-                  width={300}
-                  className="sliderProduct mainSlider"
-                />
-              </div>
-              <div className="sliderProductContainer scroll-item">
-                <img
-                  src={image2}
-                  width={300}
-                  className="sliderProduct mainSlider"
-                />
-              </div>
-              <div className="sliderProductContainer scroll-item">
-                <img
-                  src={image2}
-                  width={300}
-                  className="sliderProduct mainSlider"
-                />
-              </div>
-              <div className="sliderProductContainer scroll-item">
-                <img
-                  src={image2}
-                  width={300}
-                  className="sliderProduct mainSlider"
-                />
-              </div>
-              <div className="sliderProductContainer scroll-item">
-                <img
-                  src={image2}
-                  width={300}
-                  className="sliderProduct mainSlider"
-                />
-              </div>
-              <div className="sliderProductContainer scroll-item">
-                <img
-                  src={image2}
-                  width={300}
-                  className="sliderProduct mainSlider"
-                />
-              </div>
             </div>
           </div>
         </div>

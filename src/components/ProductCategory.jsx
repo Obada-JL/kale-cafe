@@ -30,6 +30,7 @@ const productData = {
       "عصائر الديتوكس الباردة",
       "المشروبات الساخنة",
       "الكوكتيلات",
+      "أصناف مميزة",
     ],
     imagesRoute: "/api/getImages",
     productsRoute: "/api/getDrinks",
@@ -270,27 +271,6 @@ const ProductCategory = () => {
               />
             </div>
           ))}
-          <div className="sliderProduct scroll-item">
-            <img src={image2} width={150} className="sliderProduct" />
-          </div>
-          <div className="sliderProduct scroll-item">
-            <img src={image2} width={150} className="sliderProduct" />
-          </div>
-          <div className="sliderProduct scroll-item">
-            <img src={image2} width={150} className="sliderProduct" />
-          </div>
-          <div className="sliderProduct scroll-item">
-            <img src={image2} width={150} className="sliderProduct" />
-          </div>
-          <div className="sliderProduct scroll-item">
-            <img src={image2} width={150} className="sliderProduct" />
-          </div>
-          <div className="sliderProduct scroll-item">
-            <img src={image2} width={150} className="sliderProduct" />
-          </div>
-          <div className="sliderProduct scroll-item">
-            <img src={image2} width={150} className="sliderProduct" />
-          </div>
           {/* {images.map((image, index) => (
             <div key={index} className="sliderProduct scroll-item">
               <img
