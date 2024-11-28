@@ -118,6 +118,7 @@ button:hover::before {
 .sliderProduct {
   border-radius: 30px;
   box-shadow: 0px 4px 10px 0px rgba(96, 56, 19, 0.3);
+  width: 200px;
 }
 .sliderProductContainer {
   background-color: rgba(188, 150, 115, 1);
