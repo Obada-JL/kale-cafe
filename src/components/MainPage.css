@@ -161,9 +161,14 @@ button:hover::before {
 }
 
 .scroll-item img {
-  border-radius: 15px;
+  /* border-radius: 15px;
   width: 100%;
-  height: auto;
+  height: auto; */
+
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover;
+  border-radius: 15px;
 }
 .section1Texts {
   margin: auto;
