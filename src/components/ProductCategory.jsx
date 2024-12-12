@@ -20,6 +20,7 @@ const productData = {
   drinks: {
     icon: drinksIcon,
     category: [
+      "الفواكه",
       "ميلك شيك",
       "المشروبات الغازية",
       "العصير الفريش",
@@ -37,7 +38,7 @@ const productData = {
   },
   desserts: {
     icon: drinksIcon,
-    category: ["الحلويات", "الفواكه", "حلويات فرنسية", "البوظة"],
+    category: ["الحلويات", "حلويات فرنسية", "البوظة"],
     imagesRoute: "/api/getImages",
     productsRoute: "/api/getDesserts",
   },

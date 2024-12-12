@@ -7,7 +7,7 @@ import image2 from "../assets/image2.JPG";
 import productsEllipse from "../assets/productsSection ellipse.svg";
 import sectionIcon1 from "../assets/Frame 33.svg";
 import sectionIcon2 from "../assets/Frame 30.svg";
-import sectionIcon3 from "../assets/Frame 32.svg";
+import sectionIcon3 from "../assets/hookah.svg";
 import sectionIcon4 from "../assets/Frame 31.svg";
 import { useEffect, useRef, useState } from "react";
 function MainPage() {
@@ -152,7 +152,12 @@ function MainPage() {
           <div className="titlesContainer d-flex justify-content-around">
             <a href="/hookah" className="sectionItem">
               <div className="iconContainer">
-                <img src={sectionIcon3} alt="" className="sectionIcon" />
+                <img
+                  src={sectionIcon3}
+                  alt=""
+                  className="sectionIcon"
+                  id="hookah"
+                />
               </div>
               <div>
                 <p className="sectionTitle">الأراكيل </p>

@@ -210,6 +210,10 @@ button:hover::before {
 .mobileContactButton {
   display: none;
 }
+#hookah {
+  filter: brightness(0) saturate(100%) invert(45%) sepia(75%) saturate(472%)
+    hue-rotate(348deg) brightness(101%) contrast(86%);
+}
 @media screen and (max-width: 992px) {
   .ellipses {
     display: none;
