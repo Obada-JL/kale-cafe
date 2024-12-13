@@ -9,6 +9,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Whatsapp from "../assets/whatsapp.svg";
 import Facebook from "../assets/facebook.svg";
 import Instagram from "../assets/instagram (2).svg";
+import tiktok from "../assets/tiktok.svg";
 function Footer() {
   return (
     <>
@@ -47,7 +48,13 @@ function Footer() {
           <div className="links">
             <a href="https://www.instagram.com/kalecafe23" target="_blank">
               <img src={Instagram} />
-              <p>Kale Cafe</p>
+              <p>kalecafe23</p>
+            </a>
+          </div>
+          <div className="links">
+            <a href="https://www.tiktok.com/@kalecafe23" target="_blank">
+              <img src={tiktok} id="tiktok" width={25} />
+              <p>@kalekafe23</p>
             </a>
           </div>
         </div>
@@ -85,7 +92,17 @@ function Footer() {
                   <img src={Instagram} />
                 </div>
                 <p className="d-flex justify-content-center w-100 ">
-                  Kale Cafe
+                  kalecafe23
+                </p>
+              </a>
+            </div>
+            <div className="links">
+              <a href="https://www.tiktok.com/@kalecafe23" target="_blank">
+                <div className="footerIcon">
+                  <img src={tiktok} id="tiktok" width={25} />
+                </div>
+                <p className="d-flex justify-content-center w-100 ">
+                  @kalecafe23
                 </p>
               </a>
             </div>

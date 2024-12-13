@@ -35,6 +35,10 @@
 .footerMobile {
   display: none;
 }
+#tiktok {
+  filter: brightness(0) saturate(100%) invert(20%) sepia(99%) saturate(410%)
+    hue-rotate(348deg) brightness(91%) contrast(93%);
+}
 @media screen and (max-width: 992px) {
   .footerMobile {
     display: flex;
