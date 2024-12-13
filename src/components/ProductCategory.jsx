@@ -214,7 +214,7 @@ const ProductCategory = () => {
             : category == "foods"
             ? "المأكولات"
             : category == "desserts"
-            ? "المشروبات"
+            ? "الحلويات"
             : category == "hookah"
             ? "الأراكيل"
             : "Not Found"}
