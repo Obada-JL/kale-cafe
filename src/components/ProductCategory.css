@@ -321,6 +321,7 @@ tbody td {
     justify-content: center;
     align-items: center;
   }
+
   .product-price {
     font-size: 16px;
     color: white;
@@ -392,4 +393,40 @@ tbody td {
   .categoryScroll {
     background-color: white;
   }
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.sliderProduct img {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.sliderProduct img.loaded {
+  opacity: 1;
+  height: 300px;
+}
+
+.skeleton-container {
+  display: flex;
+  gap: 15px;
+  padding: 10px;
+}
+
+.images-container {
+  display: flex;
+  gap: 15px;
+  transition: all 0.3s ease-in-out;
+}
+
+.images-container.hidden {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.images-container.visible {
+  opacity: 1;
+  transform: translateY(0);
 }

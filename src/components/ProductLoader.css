@@ -1,0 +1,191 @@
+.menu-item-loader {
+  padding: 15px;
+  background: #e0be9d;
+  border-radius: 8px;
+  margin: 8px;
+  position: relative;
+  overflow: hidden;
+}
+
+.plate-shimmer {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  min-height: 60px;
+}
+
+.plate {
+  width: 45px;
+  height: 45px;
+  background: #603813;
+  border-radius: 50%;
+  position: relative;
+  animation: platePulse 1.5s infinite ease-in-out;
+}
+
+.steam {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+}
+
+.steam span {
+  position: absolute;
+  width: 2px;
+  height: 10px;
+  background: rgba(96, 56, 19, 0.3);
+  border-radius: 2px;
+  animation: steamRise 2s infinite ease-out;
+}
+
+.steam span:nth-child(1) {
+  left: 8px;
+  animation-delay: 0.2s;
+}
+.steam span:nth-child(2) {
+  left: 15px;
+  animation-delay: 0.4s;
+}
+.steam span:nth-child(3) {
+  left: 22px;
+  animation-delay: 0.6s;
+}
+
+.details {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+.text-line {
+  height: 20px;
+  background: rgba(96, 56, 19, 0.2);
+  border-radius: 4px;
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.text-line::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  animation: shimmer 2s infinite;
+}
+
+.price-box {
+  width: 120px;
+  height: 40px;
+  background: #603813;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.price-box::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(224, 190, 157, 0.1),
+    transparent
+  );
+  animation: shimmer 2s infinite;
+}
+
+.currency {
+  color: #e0be9d;
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+@keyframes platePulse {
+  0%,
+  100% {
+    transform: scale(0.95);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes steamRise {
+  0% {
+    transform: translateY(0) scaleX(1);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(-8px) scaleX(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-16px) scaleX(1);
+    opacity: 0;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Mobile responsive styles */
+@media screen and (max-width: 992px) {
+  .menu-item-loader {
+    padding: 10px;
+  }
+
+  .plate-shimmer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .details {
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .price-box {
+    width: 100%;
+    height: 35px;
+    background: transparent;
+  }
+
+  .text-line {
+    width: 100%;
+  }
+
+  .currency {
+    color: #603813;
+  }
+}

@@ -1,0 +1,140 @@
+.image-loader-container {
+  background: #e0be9d;
+  padding: 20px;
+  border-radius: 15px;
+  min-width: 150px;
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.coffee-cup {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10px;
+}
+
+.coffee-container {
+  width: 40px;
+  height: 40px;
+  background: #603813;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+}
+
+.coffee {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 0%;
+  background: #f4e7db;
+  animation: fillCoffee 2s infinite;
+}
+
+.cup-handle {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 15px;
+  height: 20px;
+  border: 4px solid #603813;
+  border-left: none;
+  border-radius: 0 10px 10px 0;
+}
+
+.loading-text {
+  color: #603813;
+  font-weight: bold;
+  font-size: 14px;
+  animation: pulse 1.5s infinite;
+  margin-top: 10px;
+}
+
+.steam {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 4px;
+}
+
+.steam span {
+  width: 3px;
+  height: 12px;
+  background: rgba(96, 56, 19, 0.3);
+  border-radius: 2px;
+  animation: steam 2s infinite;
+}
+
+.steam span:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.steam span:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.steam span:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+@keyframes fillCoffee {
+  0% {
+    height: 0%;
+  }
+  50% {
+    height: 100%;
+  }
+  100% {
+    height: 0%;
+  }
+}
+
+@keyframes steam {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(-10px) scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-20px) scale(1);
+    opacity: 0;
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* Mobile responsive */
+@media screen and (max-width: 992px) {
+  .image-loader-container {
+    min-width: 140px;
+    min-height: 140px;
+    padding: 15px;
+  }
+
+  .coffee-cup {
+    width: 50px;
+    height: 50px;
+  }
+
+  .coffee-container {
+    width: 35px;
+    height: 35px;
+  }
+}

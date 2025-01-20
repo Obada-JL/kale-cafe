@@ -4,29 +4,46 @@ import "./App.css";
 import PageLayout from "./PageLayout";
 import MainPage from "./components/MainPage";
 import ProductsPageLayout from "./components/ProductsPageLayout";
-import DrinksPage from "./components/DrinksPage";
 import ProductCategory from "./components/ProductCategory";
+import ErrorBoundary from "./components/ErrorBoundary";
+
 function App() {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <PageLayout />,
+      element: (
+        <ErrorBoundary>
+          <PageLayout />
+        </ErrorBoundary>
+      ),
       children: [
-        { path: "/", element: <MainPage /> },
+        {
+          path: "/",
+          element: (
+            <ErrorBoundary>
+              <MainPage />
+            </ErrorBoundary>
+          ),
+        },
         {
           path: "/",
           element: <ProductsPageLayout />,
-          children: [{ path: ":category", element: <ProductCategory /> }],
+          children: [
+            {
+              path: ":category",
+              element: (
+                <ErrorBoundary>
+                  <ProductCategory />
+                </ErrorBoundary>
+              ),
+            },
+          ],
         },
       ],
     },
   ]);
 
-  return (
-    <div>
-      <RouterProvider router={router} />
-    </div>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;
