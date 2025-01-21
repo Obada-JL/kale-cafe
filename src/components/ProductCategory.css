@@ -363,10 +363,10 @@ tbody td {
     width: 100%;
   }
   .sliderProduct {
-    width: 140px !important;
+    width: 200px !important;
   }
   .scroll-item {
-    min-width: 140px;
+    min-width: 200px;
   }
   .mainSliderContainer {
     gap: 10px;
