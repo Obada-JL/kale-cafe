@@ -25,8 +25,8 @@ const productData = {
       "الوجبات الخفيفة",
       "المأكولات الشرقية",
     ],
-    imagesRoute: "/api/getImages",
-    productsRoute: "/api/getFoods", // ensure this matches your backend route
+    imagesRoute: "http://api.kale-cafe.com/api/getImages",
+    productsRoute: "http://api.kale-cafe.com/api/getFoods", // ensure this matches your backend route
   },
   drinks: {
     icon: drinksIcon,
@@ -43,20 +43,20 @@ const productData = {
       "عصائر الديتوكس الباردة",
       "أصناف مميزة",
     ],
-    imagesRoute: "/api/getImages",
-    productsRoute: "/api/getDrinks", // ensure this matches your backend route
+    imagesRoute: "http://api.kale-cafe.com/api/getImages",
+    productsRoute: "http://api.kale-cafe.com/api/getDrinks", // ensure this matches your backend route
   },
   desserts: {
     icon: drinksIcon,
     category: ["الحلويات", "حلويات فرنسية", "البوظة"],
-    imagesRoute: "/api/getImages",
-    productsRoute: "/api/getDesserts", // ensure this matches your backend route
+    imagesRoute: "http://api.kale-cafe.com/api/getImages",
+    productsRoute: "http://api.kale-cafe.com/api/getDesserts", // ensure this matches your backend route
   },
   hookah: {
     icon: drinksIcon,
     category: ["الأراكيل"],
-    imagesRoute: "/api/getImages",
-    productsRoute: "/api/getHookahs", // ensure this matches your backend route
+    imagesRoute: "http://api.kale-cafe.com/api/getImages",
+    productsRoute: "http://api.kale-cafe.com/api/getHookahs", // ensure this matches your backend route
   },
 };
 

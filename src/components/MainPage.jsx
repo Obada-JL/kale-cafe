@@ -40,7 +40,7 @@ function MainPage() {
   const fetchImages = async (selectedImgaesCategory) => {
     // console.log(data.imagesRoute);
     try {
-      const res = await fetch(`https://kale-cafe.com/api/getSpecialImages`, {
+      const res = await fetch(`https://kale-cafe.comhttp://api.kale-cafe.com/api/getSpecialImages`, {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
