@@ -44,7 +44,7 @@
   border-radius: 8px;
 }
 /* From Uiverse.io by vikiWayne */
-.button {
+/* .button {
   padding: 1em 2em;
   border: none;
   border-radius: 5px;
@@ -58,16 +58,16 @@
   position: relative;
   overflow: hidden;
   outline: 2px solid #2c9caf;
-}
+} */
 
-button:hover {
+/* button:hover {
   color: #ffffff;
   transform: scale(1.1);
   outline: 2px solid #70bdca;
   box-shadow: 4px 5px 17px -4px #268391;
-}
+} */
 
-button::before {
+/* button::before {
   content: "";
   position: absolute;
   left: -50px;
@@ -78,7 +78,7 @@ button::before {
   transform: skewX(45deg);
   z-index: -1;
   transition: width 1000ms;
-}
+} */
 
 button:hover::before {
   width: 250%;
