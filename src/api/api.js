@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:5000";
+const BASE_URL = "http://kale-cafe.com/api";
 
 export const api = {
   async fetchProducts(route, selectedCategoryId) {
