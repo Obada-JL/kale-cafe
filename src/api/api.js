@@ -1,4 +1,4 @@
-const BASE_URL = "https://kale-cafe.com/api";
+const BASE_URL = "https://kale-cafe.com";
 
 export const api = {
   async fetchProducts(route, selectedCategoryId) {
