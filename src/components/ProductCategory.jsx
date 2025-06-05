@@ -30,25 +30,25 @@ const ERROR_TYPES = {
 const productData = {
   foods: {
     icon: drinksIcon,
-    categoriesRoute: "http://kale-cafe.com/api/getFoodCategories",
+    categoriesRoute: "https://kale-cafe.com/api/getFoodCategories",
     imagesRoute: "/api/getFoodImages",
     productsRoute: "/api/getFoods",
   },
   drinks: {
     icon: drinksIcon,
-    categoriesRoute: "http://kale-cafe.com/api/getDrinkCategories",
+    categoriesRoute: "https://kale-cafe.com/api/getDrinkCategories",
     imagesRoute: "/api/getDrinkImages",
     productsRoute: "/api/getDrinks",
   },
   desserts: {
     icon: drinksIcon,
-    categoriesRoute: "http://kale-cafe.com/api/getDessertCategories",
+    categoriesRoute: "https://kale-cafe.com/api/getDessertCategories",
     imagesRoute: "/api/getDessertImages",
     productsRoute: "/api/getDesserts",
   },
   hookah: {
     icon: drinksIcon,
-    categoriesRoute: "http://kale-cafe.com/api/getHookahCategories",
+    categoriesRoute: "https://kale-cafe.com/api/getHookahCategories",
     imagesRoute: "/api/getHookahImages",
     productsRoute: "/api/getHookahs",
   },
@@ -658,7 +658,7 @@ const ProductCategory = () => {
                 key={picture.id || index}
               >
                 <img
-                  src={`http://kale-cafe.com/uploads/${picture.imagePath || picture.image}`}
+                  src={`https://kale-cafe.com/uploads/${picture.imagePath || picture.image}`}
                   className={`sliderProduct ${loadedImages.has(picture.id || index) ? "loaded" : ""
                     }`}
                   onLoad={() => handleImageLoad(picture.id || index)}
